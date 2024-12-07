@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+body{
+    display: flex;
+}
+
 .sidebar{
     height: 100vh;
     width: 380px;
@@ -110,3 +114,133 @@
     }
 }
 
+/*  ======================  */
+
+
+.global_container{
+    width: 100%;
+    height: 100vh;
+    background-color: #433D8B;
+    position: relative;
+    /* display: flex; */
+    /* justify-content: center; */
+    align-items: center;
+    flex-direction: column;
+}
+
+.tasks_list{
+    width: 800px;
+    /* height: fit-content; */
+    padding-bottom: 40px;
+
+    top: 20%;
+    left:calc(50% - 400px);
+
+    border: 1px solid white;
+    border-radius: 15px;
+    background-color: #17153B;
+    position: relative;
+    
+    header{
+        border-radius: 15px 15px 0 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 90px;
+        background-color: #17153B;
+
+        h1 , p{
+            font-size: 45px;
+            color: white;
+            margin: 10px;
+        }
+        p{
+            cursor: pointer;
+            user-select: none;
+        }
+    }
+
+
+    .task{
+        font-size: 25px ;
+        height: 50px;
+        width: 100%;
+        color: white;
+        display: flex;
+        align-items: center;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+        position: relative;
+        left: 0;
+        background-color: #2E236C;
+        transition: all .1s ease-in-out 0s ;
+
+        p{
+            font-family: 'Fira Code', Consolas, 'Courier New', monospace;
+        }
+        .disk{
+            width: 20px;
+            height: 20px;
+            background-color: #C8ACD6;
+            border-radius: 10000px;
+            margin: 10px;
+            transition: inherit ;
+        }
+        p:last-child{
+            position: absolute;
+            right: 0;
+            margin: 10px;
+            cursor: pointer;
+            user-select: none;
+        }
+        
+    }
+
+    .task:hover{
+        z-index: 3;
+        width: 105%;
+        height: 60px;
+        left: -2.5%;
+        border-radius: 10px;
+        box-shadow: 0 10px 25px 0 rgba(0, 0, 0, 0.25);
+        border-color: white;
+
+        font-size: 30px;
+        .disk{
+            width: 30px;
+            height: 30px;
+        }
+    }
+
+}
+.add_bar{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 0 -10px 25px 0 rgba(0, 0, 0, 0.25);
+    background-color: #2E236C;
+    border-top: 1px solid white;
+
+    
+    input{
+        width: 100%;
+        padding-inline: 10px;
+        font-size: 20px ;
+
+    }
+    input , button{
+        color: white;
+        background-color: inherit;
+        outline: none;
+        border: none;
+    }
+    button{
+        font-size: 35px ;
+        margin-right: 10px ;
+        right: 0;
+        cursor: pointer;
+        z-index: 2;
+    }
+}
