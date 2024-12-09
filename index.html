@@ -37,54 +37,40 @@
 
     <section class="global_container">
 
-        <div class="tasks_list">
-            <header>
-                <h1>title</h1>
-                <p>...</p>
-            </header>
+        <header class="tasks_list_header">
+            <h1 name="tasks_list_header_title">title</h1>
+            <p>...</p>
+        </header>
 
-            <div class="task">
-                <div class="disk"></div>
-                <p>task</p>
-                <p> &lt; </p>
-            </div>
-
-            <div class="task">
-                <div class="disk"></div>
-                <p>task</p>
-                <p> &lt; </p>
-            </div>
-
-            <div class="task">
-                <div class="disk"></div>
-                <p>task</p>
-                <p> &lt; </p>
-            </div>
+        <div class="adding_div_for_overflow">
             
-            <div class="task">
-                <div class="disk"></div>
-                <p>task</p>
-                <p> &lt; </p>
-            </div>
 
-            <div class="task">
-                <div class="disk"></div>
-                <p>task</p>
-                <p> &lt; </p>
-            </div>
+            <div class="tasks_list">
+                <div class="task">
+                    <div class="disk"></div>
+                    <p>task</p>
+                    <p> &lt; </p>
+                </div>
 
-            <div class="task">
-                <div class="disk"></div>
-                <p>task</p>
-                <p> &lt; </p>
-            </div>
+                <div class="task">
+                    <div class="disk"></div>
+                    <p>task</p>
+                    <p> &lt; </p>
+                </div>
 
+                <div class="task">
+                    <div class="disk"></div>
+                    <p>task</p>
+                    <p> &lt; </p>
+                </div>
+                
+            </div>
         </div>
-
-        <form action="" method="POST" class="add_bar">
-            <input type="text" class="add_bar_input" >
-            <button type="submit"  class="add_bar_button"> + </button>
-        </form>
+        <div class="bottom_of_tasklist"></div>
+        <div class="add_bar">
+            <input type="text" class="add_bar_input">
+            <button type="" onclick="add_task_to_task_list()" class="add_bar_button"> + </button>
+        </div>
 
     </section>
 

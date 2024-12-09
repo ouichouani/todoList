@@ -1,29 +1,29 @@
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 
-body{
+body {
     display: flex;
 }
 
-.sidebar{
+.sidebar {
     height: 100vh;
     width: 380px;
-    background-color: #17153B ;
-    border : 1px solid white;
+    background-color: #17153B;
+    border: 1px solid white;
     border-width: 0 1px 0 0;
     position: relative;
 }
 
-.sidebar header{
+.sidebar header {
     height: 110px;
     width: 100%;
     position: relative;
 }
 
-.sidebar header .trois_points{
+.sidebar header .trois_points {
     position: absolute;
     top: -20px;
     right: 10px;
@@ -34,7 +34,7 @@ body{
     color: white;
 }
 
-.sidebar header img{
+.sidebar header img {
     float: left;
     margin: 10px;
     width: 90px;
@@ -45,32 +45,33 @@ body{
     user-select: none;
 }
 
-.sidebar header .user_info{
+.sidebar header .user_info {
     float: left;
     display: flex;
     flex-direction: column;
     height: 100%;
     justify-content: center;
 
-    .username{
+    .username {
         display: block;
-        font-size: 30px ;
+        font-size: 30px;
         color: white;
 
     }
-    .useremail{
+
+    .useremail {
         display: block;
-        font-size: 12px ;   
+        font-size: 12px;
         color: white;
 
     }
 }
 
-.categorys{
+.categorys {
     padding: 20px 0;
     width: 100%;
 
-    div{
+    div {
         display: flex;
         align-items: center;
         height: 40px;
@@ -78,38 +79,40 @@ body{
         border-width: 0 0 1px 0;
         font-size: 20px;
         color: white;
-        
-        p{
-            padding-left: 5px ;
-            transition:all  0.5s ease;
+
+        p {
+            padding-left: 5px;
+            transition: all 0.5s ease;
         }
     }
 
-    div:hover{
-        border: 1px solid white ;
+    div:hover {
+        border: 1px solid white;
         border-width: 0 0 1px 0;
-        p{
-            padding-left: 10px ;
+
+        p {
+            padding-left: 10px;
         }
 
     }
 }
 
-.add_lists{
-    position:absolute ;
+.add_lists {
+    position: absolute;
     bottom: 0;
-    width: 100% ;
-    
+    width: 100%;
+
     /* background-color: #C8ACD6; */
-    label{
+    label {
         display: inline-block;
         text-align: center;
-        width: 100% ;
+        width: 100%;
         font-size: 25px;
         color: white;
         cursor: pointer;
     }
-    input{
+
+    input {
         display: none;
     }
 }
@@ -117,31 +120,21 @@ body{
 /*  ======================  */
 
 
-.global_container{
+.global_container {
     width: 100%;
     height: 100vh;
     background-color: #433D8B;
     position: relative;
-    /* display: flex; */
-    /* justify-content: center; */
-    align-items: center;
+
+    display: flex;
     flex-direction: column;
-}
+    justify-content: center;
+    align-items: center;
 
-.tasks_list{
-    width: 800px;
-    /* height: fit-content; */
-    padding-bottom: 40px;
-
-    top: 20%;
-    left:calc(50% - 400px);
-
-    border: 1px solid white;
-    border-radius: 15px;
-    background-color: #17153B;
-    position: relative;
-    
-    header{
+    header {
+        z-index: 5;
+        border: 1px solid white;
+        width: 800px;
         border-radius: 15px 15px 0 0;
         display: flex;
         align-items: center;
@@ -149,96 +142,159 @@ body{
         height: 90px;
         background-color: #17153B;
 
-        h1 , p{
+        h1,
+        p {
             font-size: 45px;
             color: white;
             margin: 10px;
         }
-        p{
+        p {
             cursor: pointer;
             user-select: none;
         }
     }
 
 
-    .task{
-        font-size: 25px ;
-        height: 50px;
+    .adding_div_for_overflow {
+
+        position: relative;
+        background-color: transparent;
+        max-height: 480px;
+        height: fit-content;
+        width: 860px;
+        margin-left: 2px;
+
+        /* background-color: aliceblue; */
+
+        overflow: scroll;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+    }
+    .adding_div_for_overflow::-webkit-scrollbar{
+        width: 3px;
+    }
+    .adding_div_for_overflow::-webkit-scrollbar-corner{
+        background-color: transparent;
+    }
+    .adding_div_for_overflow::-webkit-scrollbar-{
+        background-color: transparent;
+    }
+    .adding_div_for_overflow::-webkit-scrollbar-thumb{
+        background-color: rgb(255, 255, 255);
+    }
+
+    .tasks_list {
+        width: 800px;
+        height: fit-content;
+
+        border: 1px solid white;
+        border-width: 0 1px;
+        position: relative;
+    }
+    .bottom_of_tasklist{
+        width: 800px;
+        height: 40px;
+        background-color: #17153B;
+        z-index: 5;
+        margin-top: -16px;
+        border-radius: 0 0 15px 15px;
+        border: 1px solid white;
+    }
+
+    .task {
+        font-size: 25px;
+        min-height: 50px;
         width: 100%;
+
         color: white;
+
         display: flex;
         align-items: center;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.5);
         position: relative;
         left: 0;
-        background-color: #2E236C;
-        transition: all .1s ease-in-out 0s ;
 
-        p{
+        border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+        background-color: #2E236C;
+        transition: all .1s ease-in-out 0s;
+
+        p {
+            width: 700px;
+            padding: 10px;
             font-family: 'Fira Code', Consolas, 'Courier New', monospace;
+            word-break: break-word; /* Breaks words when necessary */
+            overflow-wrap: break-word; /* Ensures text breaks */
         }
-        .disk{
+
+        .disk {
             width: 20px;
             height: 20px;
             background-color: #C8ACD6;
             border-radius: 10000px;
             margin: 10px;
-            transition: inherit ;
+            transition: inherit;
+
         }
-        p:last-child{
+
+        p:last-child {
             position: absolute;
+            margin: 0 30px;
             right: 0;
             margin: 10px;
             cursor: pointer;
             user-select: none;
+            width: fit-content;
         }
-        
     }
 
-    .task:hover{
+    .task:hover {
         z-index: 3;
         width: 105%;
-        height: 60px;
+        min-height: 60px;
         left: -2.5%;
         border-radius: 10px;
         box-shadow: 0 10px 25px 0 rgba(0, 0, 0, 0.25);
         border-color: white;
 
         font-size: 30px;
-        .disk{
+
+        .disk {
             width: 30px;
             height: 30px;
         }
     }
-
 }
-.add_bar{
+
+
+.add_bar {
     position: absolute;
     bottom: 0;
     width: 100%;
-    height: 60px;
+    height: 40px;
     display: flex;
     justify-content: space-between;
     box-shadow: 0 -10px 25px 0 rgba(0, 0, 0, 0.25);
     background-color: #2E236C;
     border-top: 1px solid white;
 
-    
-    input{
+    input {
         width: 100%;
         padding-inline: 10px;
-        font-size: 20px ;
-
+        font-size: 20px;
     }
-    input , button{
+
+    input,
+    button {
         color: white;
         background-color: inherit;
         outline: none;
         border: none;
     }
-    button{
-        font-size: 35px ;
-        margin-right: 10px ;
+
+    button {
+        font-size: 35px;
+        margin-right: 10px;
         right: 0;
         cursor: pointer;
         z-index: 2;
