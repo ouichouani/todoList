@@ -103,10 +103,9 @@ body {
 
 .add_lists {
     position: absolute;
-    bottom: 0;
+    bottom: 30px;
     width: 100%;
 
-    /* background-color: #C8ACD6; */
     label {
         display: inline-block;
         text-align: center;
@@ -185,10 +184,6 @@ body {
         background-color: transparent;
     }
 
-    .adding_div_for_overflow::-webkit-scrollbar- {
-        background-color: transparent;
-    }
-
     .adding_div_for_overflow::-webkit-scrollbar-thumb {
         background-color: rgb(255, 255, 255);
     }
@@ -196,7 +191,6 @@ body {
     .tasks_list {
         width: 100%;
         height: fit-content;
-
         border: 1px solid white;
         border-width: 0 1px;
         position: relative;
@@ -280,19 +274,22 @@ body {
 
 .add_bar {
     position: absolute;
-    bottom: 0;
+    bottom: 10px;
     width: 100%;
-    height: 40px;
+    height: 50px;
     display: flex;
     justify-content: space-between;
-    box-shadow: 0 -10px 25px 0 rgba(0, 0, 0, 0.25);
     background-color: #2E236C;
-    border-top: 1px solid white;
+    border: 1px solid white;
 
     input {
+        font-family: 'Fira Code', Consolas, 'Courier New', monospace;
         width: 100%;
         padding-inline: 10px;
         font-size: 20px;
+    }
+    input::placeholder{
+        color: rgb(255, 255, 255 , 0.5);
     }
 
     input,
